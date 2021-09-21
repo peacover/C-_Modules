@@ -1,0 +1,15 @@
+.DS_Store
+.vscode
+
+*.o
+*.obj
+
+*.lib
+*.a
+*.la
+*.lo
+
+*.dSYM/
+*.su
+*.idb
+*.pdb
