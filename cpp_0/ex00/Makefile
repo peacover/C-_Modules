@@ -1,6 +1,6 @@
 NAME = megaphone
-INC = -I includes/
-SRCS =	./megaphone.cpp
+INC = -I ./
+SRCS =	./main.cpp
 
 FLAGS = clang++ -Wall -Wextra -Werror -g -fsanitize=address
 all: $(NAME)
