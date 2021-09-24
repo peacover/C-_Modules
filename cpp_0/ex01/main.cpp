@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 08:27:56 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/09/21 17:30:10 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/09/24 12:01:19 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int	main()
 		if (inp == "ADD")
 		{
 			Pb.add_contact();
-			Pb.setIndex(Pb.getIndex() + 1);
+			if (Pb.getIndex() < 7)
+				Pb.setIndex(Pb.getIndex() + 1);
 		}
 		else if (inp == "SEARCH")
 			Pb.search_contact();
