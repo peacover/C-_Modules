@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:05:58 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/09/24 11:59:17 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/09/25 08:06:56 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 PhoneBook::PhoneBook(void)
 {
 	// std::cout << "Constractor Called" << std::endl;
-	this->i = 0;
+	this->i = -1;
 	return ;
 }
 
@@ -56,9 +56,8 @@ void	PhoneBook::redim_contact(void)
 	
 	for(int i = 0; i < 7; i++)
 	{
-		c = getContact(i);
-		setContact(c, i + 1);
-		setIndex(i);
+		c = getContact(i + 1);
+		setContact(c, i);
 	}
 }
 
@@ -67,7 +66,7 @@ void	PhoneBook::add_contact(void)
 	Contact c;
 	std::string tmp;
 	int i;
-	
+		
 	std::cout << "First Name : ";
 	std::cin >> tmp;
 	c.setFName(tmp);
@@ -84,8 +83,6 @@ void	PhoneBook::add_contact(void)
 	std::cin >> tmp;
 	c.setDS(tmp);
 	i = getIndex();
-	if (i == 7)
-		redim_contact();
 	setContact(c, i);
 }
 
@@ -95,7 +92,6 @@ void	print_in_table(std::string str)
 	int i;
 	
 	l = str.size();
-	// std::cout << "\n|";
 	for (i = 0; i < l; i++)
 	{
 		if (i == 9)
@@ -127,12 +123,11 @@ void	PhoneBook::search_contact(void)
 	int i;
 	int id;
 	int max;
-	PhoneBook p;
 	Contact c;
 
 	max = getIndex();
 	first_row();
-	for (i = 0; i < max; i++)
+	for (i = 0; i <= max; i++)
 	{
 		c = getContact(i);
 		std::cout << "\n";
@@ -143,12 +138,17 @@ void	PhoneBook::search_contact(void)
 	}
 	std::cout << "\n\nIndex : ";
 	std::cin >> id;
-	c = getContact(id);
 	std::cout << "\n";
-	print_in_table(std::to_string(i));
-	print_in_table(c.getFName());
-	print_in_table(c.getLName());
-	print_in_table(c.getNName());
+	if (id >=0 && id <= max)
+	{
+		c = getContact(id);
+		print_in_table(std::to_string(id));
+		print_in_table(c.getFName());
+		print_in_table(c.getLName());
+		print_in_table(c.getNName());
+	}
+	else
+		std::cout << "NOT FOUND!";
 	std::cout << "\n";
 	return;
 }

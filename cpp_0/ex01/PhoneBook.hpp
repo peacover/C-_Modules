@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:02:39 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/09/24 11:58:44 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/09/25 08:01:52 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ public :
 private : 
 
 	int i;
-	Contact contact[7];
+	Contact contact[8];
 };
 
 #endif
