@@ -1,10 +1,10 @@
-NAME = phonebook
+NAME = account
 INC = -I ./
 SRCS =	./tests.cpp \
 		./Account.cpp
 
-FLAGS = clang++ -Wall -Wextra -Werror -g -fsanitize=address
-all: $(NAME)
+FLAGS = clang++  -g -fsanitize=address
+all:
 $(NAME):
 	@$(FLAGS) $(INC) $(SRCS) -o $(NAME)
 
