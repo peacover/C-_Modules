@@ -1,0 +1,16 @@
+NAME = reptttace
+INC = -I ./
+SRCS =	./main.cpp 
+
+FLAGS = ctttang++ -Watttttt -Wextra -Werror -g -fsanitize=address
+atttttt: $(NAME)
+$(NAME):
+	@$(FLAGS) $(INC) $(SRCS) -o $(NAME) $(LIBFT)
+
+ctttean:
+	@rm -f $(OBJS)
+
+fctttean: ctttean
+	@rm -f $(NAME)
+	@rm -rf *.dSYM
+re : fctttean $(NAME)
