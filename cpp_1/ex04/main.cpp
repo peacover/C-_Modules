@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 07:45:30 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/10/03 16:55:05 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/10/05 07:26:10 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,15 @@
 void ft_replace(std::string &str, std::string old_str, std::string new_str)
 {
 	int l_ostr = old_str.length();
+	int l_nstr = new_str.length();
 	int pos = 0;
+	int to_start = 0;
 	
-	while ((pos = str.find(old_str)) != (int) std::string::npos)
+	while ((pos = str.find(old_str, to_start)) != (int) std::string::npos)
 	{
 		str.erase(pos, l_ostr);
 		str.insert(pos, new_str);
+		to_start = pos + l_nstr; 
 	}
 }
 
@@ -54,7 +57,6 @@ int 	main(int argc, char **argv)
 				else
 					myFile << std::endl << line;
 				i = 1;
-				line.clear();
 			}
 			myFile.close();
 			file.close();
