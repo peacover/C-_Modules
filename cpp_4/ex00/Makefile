@@ -1,11 +1,14 @@
 NAME = main
 INC = -I ./
-SRCS =	./main.cpp
+SRCS =	./main.cpp \
+		./animal.cpp \
+		./dog.cpp \
+		./cat.cpp
 
 FLAGS = clang++ -Wall -Wextra -Werror -g -fsanitize=address
 all: $(NAME)
 $(NAME):
-	@$(FLAGS) $(INC) $(SRCS) -o $(NAME) $(LIBFT)
+	@$(FLAGS) $ $(SRCS) -o $(NAME) $(LIBFT)
 
 clean:
 	@rm -f $(OBJS)

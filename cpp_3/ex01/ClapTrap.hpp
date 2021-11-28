@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 08:11:30 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/10/28 07:17:19 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/11/01 13:17:20 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string>
 
 #ifndef CLAPTRAP_HPP
-#define CLAPTRACP_HPP
+#define CLAPTRAP_HPP
 
 class ClapTrap
 {

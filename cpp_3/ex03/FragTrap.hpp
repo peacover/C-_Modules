@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 08:29:46 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/10/28 09:30:26 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/11/01 13:15:23 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class FragTrap : virtual public ClapTrap
 	public:
 		FragTrap(std::string name);
 		FragTrap(FragTrap const & src);
-		~FragTrap();
+		virtual ~FragTrap();
 		
 		void highFivesGuys(void);
 	protected:
