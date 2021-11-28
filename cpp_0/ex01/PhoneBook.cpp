@@ -6,26 +6,21 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:05:58 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/09/25 08:06:56 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/11/28 07:59:09 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include "Contact.hpp"
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(void)
 {
-	// std::cout << "Constractor Called" << std::endl;
+	// std::cout << "PhoneBook Constractor Called" << std::endl;
 	this->i = -1;
-	return ;
 }
 
 PhoneBook::~PhoneBook(void)
 {
-	// std::cout << "Destructor Called" << std::endl;
-	return ;
+	// std::cout << "PhoneBook Destructor Called" << std::endl;
 }
 
 int	PhoneBook::getIndex(void) const
@@ -54,7 +49,7 @@ void	PhoneBook::redim_contact(void)
 {
 	Contact c;
 	
-	for(int i = 0; i < 7; i++)
+	for (int i = 0; i < 7; i++)
 	{
 		c = getContact(i + 1);
 		setContact(c, i);
@@ -139,7 +134,7 @@ void	PhoneBook::search_contact(void)
 	std::cout << "\n\nIndex : ";
 	std::cin >> id;
 	std::cout << "\n";
-	if (id >=0 && id <= max)
+	if (id >= 0 && id <= max)
 	{
 		c = getContact(id);
 		print_in_table(std::to_string(id));

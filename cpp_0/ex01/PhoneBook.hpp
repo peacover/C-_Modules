@@ -6,12 +6,16 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:02:39 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/09/25 08:01:52 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/11/28 07:26:12 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_H
 # define PHONEBOOK_H
+
+#include "Contact.hpp"
+#include <iostream>
+#include <string>
 
 class PhoneBook{
 

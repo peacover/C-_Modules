@@ -1,11 +1,11 @@
 NAME = megaphone
 INC = -I ./
-SRCS =	./main.cpp
+SRCS =	./megaphone.cpp
 
-FLAGS = clang++ -Wall -Wextra -Werror -g -fsanitize=address
+FLAGS = clang++ -Wall -Wextra -Werror
 all: $(NAME)
 $(NAME):
-	@$(FLAGS) $(INC) $(SRCS) -o $(NAME) $(LIBFT)
+	@$(FLAGS) $(INC) $(SRCS) -o $(NAME)
 
 clean:
 	@rm -f $(OBJS)

@@ -6,12 +6,15 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 08:28:13 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/09/21 16:54:21 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/11/28 07:24:31 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_H
 # define CONTACT_H
+
+#include <iostream>
+#include <string>
 
 class Contact{
 
@@ -38,7 +41,6 @@ private :
 	std::string	_n_name; // nickname
 	std::string	_p_nb; //phone number
 	std::string _ds; //dark secret
-		
 };
 
 #endif

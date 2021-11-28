@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 08:27:56 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/09/25 08:07:22 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/11/28 08:00:03 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main()
 		else if (inp == "SEARCH")
 			Pb.search_contact();
 		else if (inp == "EXIT")
-			return(0);
+			return (0);
 		else
 			std::cout << "Invalid input!\n\n";
 	}

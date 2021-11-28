@@ -3,8 +3,8 @@ INC = -I ./
 SRCS =	./tests.cpp \
 		./Account.cpp
 
-FLAGS = clang++  -g -fsanitize=address
-all:
+FLAGS = clang++ -Wall -Werror -Werror  -g -fsanitize=address
+all:$(NAME)
 $(NAME):
 	@$(FLAGS) $(INC) $(SRCS) -o $(NAME)
 
