@@ -3,7 +3,7 @@ INC = -I ./
 SRCS =	./main.cpp \
 		./Fixed.cpp
 
-FLAGS = clang++ -Wall -Wextra -Werror -g -fsanitize=address
+FLAGS = clang++ -Wall -Wextra -Werror 
 all: $(NAME)
 $(NAME):
 	@$(FLAGS) $(INC) $(SRCS) -o $(NAME) $(LIBFT)
