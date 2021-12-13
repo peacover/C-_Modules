@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 14:53:31 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/12/12 16:40:12 by yer-raki         ###   ########.fr       */
+/*   Created: 2021/12/13 09:51:25 by yer-raki          #+#    #+#             */
+/*   Updated: 2021/12/13 17:51:28 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#include "Brain.hpp"
 
-#include "animal.hpp"
-
-class Dog : public Animal
+Brain::Brain()
 {
-	public:
+    for (int i = 0; i < 100 ; i++ ) 
+        _ideas[i] = std::to_string(i);
+    return ;
+}
 
-		Dog();
-		Dog(Dog const & src);
-		virtual ~Dog();
-		Dog	& operator=( Dog const & rhs );
+Brain::Brain(Brain const & src)
+{
+    *this = src;
+}
 
-		virtual void makeSound() const;
-};
+Brain::~Brain()
+{
+    
+}
 
-#endif
+Brain & Brain::operator=(Brain const & rhs) {
+    for(int i = 0; i < 100 ; i++)
+        _ideas[i] = rhs._ideas[i];
+    return (*this);
+}

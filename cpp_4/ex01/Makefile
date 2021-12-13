@@ -4,6 +4,7 @@ SRCS =	./main.cpp \
 		./animal.cpp \
 		./dog.cpp \
 		./cat.cpp \
+		./Brain.cpp \
 		./WrongCat.cpp \
 		./WrongAnimal.cpp 
 
