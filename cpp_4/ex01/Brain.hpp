@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 10:24:29 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/12/13 17:46:56 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/12/15 09:56:29 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,9 @@ class Brain
 
         Brain(Brain const & src);
         Brain & operator=(Brain const & rhs);
-        std::string & getIdeas() const;
-        void    setIdea(std::string *idea);
-        void    printId() {
-            for (int i = 0; i < 100 ; i++)
-                std::cout << _ideas[i] << std::endl;
-            return ;
-        }
+        
+        std::string getIdeas() const;
+        void    setIdea(std::string idea);
     private:
         std::string _ideas[100];
 };

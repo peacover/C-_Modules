@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 14:53:03 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/12/13 17:45:29 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/12/15 10:48:19 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,31 @@ Cat::~Cat()
 
 Cat::Cat(Cat const &src)
 {
+	std::cout << "Cat Copy Constractor Called" << std::endl;
 	*this = src;
 	// operator=(src);
 }
 
+std::string Cat::getBrain() const
+{
+	return (_br->getIdeas());
+}
+
+void    Cat::setBrain(std::string idea)
+{
+	for(int i = 0; i < 100; i++)
+		_br->setIdea(idea); 
+}
+
 Cat	& Cat::operator=(Cat const & rhs)
 {
-	_br = new Brain(*(rhs._br));
+	if (this == &rhs)
+		return (*this);
+	this->_type = rhs.getType();
+	if (_br)
+		delete _br;
+	_br = new Brain(*rhs._br);
+	// _br = rhs._br;
 	return (*this);
 }
 

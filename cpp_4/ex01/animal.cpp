@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 18:49:05 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/12/13 10:20:45 by yer-raki         ###   ########.fr       */
+/*   Updated: 2021/12/13 18:41:54 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Animal::Animal(Animal const &src)
 	*this = src;
 }
 
-std::string		Animal::getType() const
+std::string	Animal::getType() const 
 {
 	return(this->_type);
 }
