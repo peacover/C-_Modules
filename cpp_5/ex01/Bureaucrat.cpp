@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 10:11:44 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/12/22 18:48:25 by yer-raki         ###   ########.fr       */
+/*   Updated: 2022/01/03 12:29:24 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,17 @@ Bureaucrat::Bureaucrat()
 
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
+Bureaucrat::Bureaucrat(std::string name, int grade)
 {
     if (grade > 150)
         throw GradeTooLowException();
     else if (grade < 1)
         throw GradeTooHighException();
     else
+    {
         _grade = grade;
+        _name = name;
+    }
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const & rhs)
@@ -42,8 +45,8 @@ Bureaucrat & Bureaucrat::operator=(Bureaucrat const &rhs)
 {
     if (this != &rhs)
     {
-        this->_grade = rhs.getGrade();
-        // this->_name = rhs.getName();
+        this->_grade = getGrade();
+        this->_name = getName();
     }
     return (*this);
 }
@@ -80,4 +83,14 @@ void        Bureaucrat::decrement_grade()
         throw GradeTooLowException();
     else
         _grade++;
+}
+
+void	Bureaucrat::signForm(Form const & f)
+{
+    if (f.getIsSigned() == true)
+    {
+        std::cout << this->_name << " signs " << f.getName() << std::endl;
+    }
+    else
+        std::cout << this->_name << " cannot sign " << f.getName()  << " because Grade is too low" << std::endl;
 }

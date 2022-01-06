@@ -6,16 +6,21 @@
 #    By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/17 16:28:17 by yer-raki          #+#    #+#              #
-#    Updated: 2022/01/06 09:23:34 by yer-raki         ###   ########.fr        #
+#    Updated: 2022/01/06 09:28:51 by yer-raki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = main
 INC = -I ./
 SRCS =	./main.cpp \
-		./Bureaucrat.cpp
+		./Bureaucrat.cpp \
+		./Form.cpp \
+		./ShrubberyCreationForm.cpp \
+		./RobotomyRequestForm.cpp \
+		./PresidentialPardonForm.cpp \
+		./Intern.cpp
 
-FLAGS = clang++ -Wall -Wextra -Werror 
+FLAGS = clang++ -Wall -Wextra -Werror
 all: $(NAME)
 $(NAME):
 	@$(FLAGS) $(INC) $(SRCS) -o $(NAME) $(LIBFT)

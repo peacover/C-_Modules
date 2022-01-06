@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 09:43:30 by yer-raki          #+#    #+#             */
-/*   Updated: 2021/12/22 18:45:20 by yer-raki         ###   ########.fr       */
+/*   Updated: 2022/01/03 11:44:45 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 #include <iostream>
 #include <string>
+#include "Form.hpp"
 
+class Form;
 class Bureaucrat
 {
     public:
@@ -28,6 +30,7 @@ class Bureaucrat
         void        increment_grade();
         void        decrement_grade();
 
+        void	signForm(Form const & f);
         
         class GradeTooLowException : public std::exception
         {
@@ -47,10 +50,10 @@ class Bureaucrat
         };
         
     private:
-        const std::string _name;
+        std::string _name;
         int         _grade;
         Bureaucrat();
 };
-std::ostream &	operator<<(std::ostream & o, Bureaucrat const & rhs);
 
+std::ostream &	operator<<(std::ostream & o, Bureaucrat const & rhs);
 #endif
