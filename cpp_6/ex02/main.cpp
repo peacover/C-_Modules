@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 18:09:09 by yer-raki          #+#    #+#             */
-/*   Updated: 2022/02/05 18:56:23 by yer-raki         ###   ########.fr       */
+/*   Updated: 2022/02/06 09:14:14 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,14 @@ void    identify(Base* p)
     B *b = dynamic_cast<B*>(p);
     C *c = dynamic_cast<C*>(p);
 
-    if (!a)
+    if (a)
         std::cout << "A" << std::endl;
-    else if (!b)
+    else if (b)
         std::cout << "B" << std::endl;
-    else if (!c)
+    else if (c)
         std::cout << "C" << std::endl;
+
+    
 }
 
 void    identify(Base& p)
@@ -77,8 +79,9 @@ void    identify(Base& p)
 
 int main()
 {
-    Base *b = new Base();
-    b = generate();
+    Base* b = generate();
+    // b = generate();
     identify(b);
+    std::cout << "----------------------------------" << std::endl;
     identify(*b);
 }

@@ -6,7 +6,7 @@
 /*   By: yer-raki <yer-raki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 18:01:07 by yer-raki          #+#    #+#             */
-/*   Updated: 2022/02/05 18:56:29 by yer-raki         ###   ########.fr       */
+/*   Updated: 2022/02/06 09:08:43 by yer-raki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,24 @@
 class Base
 {
     public:
-        virtual ~Base();
+        virtual ~Base(){};
 };
 
 class A : public Base
 {
     public:
-        ~A();
+        ~A(){};
 };
 
 class B : public Base
 {
     public:
-        ~B();
+        ~B(){};
 };
 
 class C : public Base
 {
     public:
-        ~C();
+        ~C(){};
 };
 #endif
